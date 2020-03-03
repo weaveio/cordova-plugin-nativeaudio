@@ -32,15 +32,16 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
     AVAudioSession *session = [AVAudioSession sharedInstance];
     // we activate the audio session after the options to mix with others is set
     NSError *setCategoryError = nil;
-
+    
     // Allows the application to mix its audio with audio from other apps.
-    if (![session setCategory:AVAudioSessionCategoryAmbient
+    if (![session setCategory:AVAudioSessionCategoryPlayback
                   withOptions:AVAudioSessionCategoryOptionMixWithOthers
                         error:&setCategoryError]) {
 
         NSLog (@"Error setting audio session category.");
         return;
     }
+    // rgagne: replaced AVAudioSessionCategoryAmbient with playback
 }
 
 - (void) parseOptions:(NSDictionary*) options
