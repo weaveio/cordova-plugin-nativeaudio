@@ -52,6 +52,12 @@
             </feature>
         </config-file>
 
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>audio</string>
+            </array>
+        </config-file>
+
         <framework src="Foundation.framework"/>
         <framework src="AVFoundation.framework"/>
         <framework src="AudioToolbox.framework"/>
