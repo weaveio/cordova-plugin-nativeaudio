@@ -41,7 +41,7 @@ NSString* INFO_VOLUME_CHANGED = @"(NATIVE AUDIO) Volume changed.";
         NSLog (@"Error setting audio session category.");
         return;
     }
-    // AVAudioSessionCategoryOptionDuckOthers
+    // AVAudioSessionCategoryOptionDuckOthers 
     // rgagne: replaced AVAudioSessionCategoryAmbient with playback | AVAudioSessionCategoryPlayback
     // rgagne: removed AVAudioSessionCategoryOptionMixWithOthers and replaced with duck others
     // AVAudioSessionCategoryPlayback, AVAudioSessionCategoryOptionDuckOthers
